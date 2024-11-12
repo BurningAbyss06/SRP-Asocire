@@ -14,6 +14,7 @@ func main() {
 	if DB.Error != nil {
 		panic(DB.Error.Error())
 	} else {
+		database.Create_migration(DB)
 		log.Println("Se Conecto correctamente a la DB")
 	}
 	r := mux.NewRouter()
